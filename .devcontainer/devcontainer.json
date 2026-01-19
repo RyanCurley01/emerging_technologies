@@ -1,0 +1,23 @@
+{
+  "name": "Python & Jupyter DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "jupyter.askForKernelRestart": false,
+        "jupyter.kernels.computeAutoDefault": true,
+        "python.terminal.activateEnvironment": false,
+        "python.envFile": "",
+        "python.experiments.enabled": false
+      }
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install ipykernel numpy && python -m ipykernel install --sys-prefix --name devcontainer --display-name 'Python 3.12 (DevContainer)'"
+}
