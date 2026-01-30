@@ -1,8 +1,10 @@
 {
   "name": "Python & Jupyter DevContainer",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": ".."
   },
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -19,5 +21,5 @@
       }
     }
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install ipykernel numpy && python -m ipykernel install --sys-prefix --name devcontainer --display-name 'Python 3.12 (DevContainer)'"
+  "postCreateCommand": "pip install -r requirements.txt && python -m ipykernel install --user --name devcontainer --display-name 'Python 3.12 (DevContainer)'"
 }
