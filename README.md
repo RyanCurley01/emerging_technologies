@@ -28,23 +28,6 @@ This repository contains solutions to emerging technologies problems that progre
 2. The dev container will automatically set up the environment with all dependencies
 3. Open `problem.ipynb` in VS Code's Jupyter extension
 
-### Local Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RyanCurley01/emerging_technologies.git
-   cd emerging_technologies
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Launch Jupyter:
-   ```bash
-   jupyter notebook problem.ipynb
-   ```
 
 ## Running the Code
 
@@ -57,19 +40,13 @@ Open `problem.ipynb` and run the cells sequentially. Each problem section contai
 
 The notebook is designed to be run from top to bottom, as later problems build upon functions and concepts defined in earlier ones.
 
-### Key Concepts Demonstrated
-
-- **Boolean Functions**: Understanding constant vs. balanced functions and their properties
-- **Quantum Superposition**: Using Hadamard gates to create quantum superposition states
-- **Quantum Oracles**: Encoding classical functions as quantum gates with phase kickback
-- **Quantum Interference**: Using interference patterns to extract information from quantum states
-- **Quantum Advantage**: Deutsch's algorithm determining function type with a single query vs. classical approaches requiring multiple queries
-
 ## Project Structure
 
 ```
 emerging_technologies/
-├── problem.ipynb        # Main notebook with all implementations
-├── README.md            # This file
-└── requirements.txt     # Python dependencies
+├── .devcontainer/       # Dev container configuration for Codespaces
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── problems.ipynb       # Main notebook with all implementations
+└── README.md
 ```
